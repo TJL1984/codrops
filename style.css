@@ -1,19 +1,105 @@
-body {
-  margin:0 auto;
+
+/*everything inside the article*/
+main {
+  width: 1050px;
+  margin: 0 auto;
 }
 
-.item {
+/*contains the images and the animations for each*/
+article {
+  width: 300px;
   float: left;
-  width: 50%;
-  margin-left: 2%;
-  border-style: 1em #666;
+  margin: 25px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.item img {
+/*targets the section*/
+article section {
+  border: 2px solid #aabbff;
+  padding: 20px;
+  border-bottom: none;
+}
+
+/*controls the images*/
+article img {
   width: 100%;
-  height: auto;
 }
 
-.main {
-  border: #aa00ff 1ps solid;
+/*backside of shirt image*/
+.blueback {
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+
+.pinkback {
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+
+.yellowback {
+  width: 250px;
+  position:absolute;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+}
+
+article ul {
+  padding: 0;
+  margin: 0;
+}
+
+article li {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 20%;
+  border: 2px solid #aabbff;
+  border-left: none;
+  box-sizing: border-box;
+  position: relative;
+  height: 50px;
+}
+
+article li:hover .barmenu{
+  opacity: 1;
+  bottom: 20px;
+}
+
+article li:first-child {
+  border-left: 2px solid #aabbff;
+}
+
+.barmenu: {
+  border:2px solid #aabbff;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.barmenu::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 2px solid #aabbff;
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.barmenu li {
+  border: none;
 }
