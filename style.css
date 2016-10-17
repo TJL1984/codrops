@@ -1,0 +1,21 @@
+body {
+  margin:0 auto;
+}
+
+.item {
+  float: left;
+  width: 50%;
+  margin-left: 2%;
+  border-style: 1em #666;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  float: left;
+  width: 80%;
+  margin-left: 10em;
+}
