@@ -15,7 +15,5 @@ body {
 }
 
 .main {
-  float: left;
-  width: 80%;
-  margin-left: 10em;
+  border: #aa00ff 1ps solid;
 }
