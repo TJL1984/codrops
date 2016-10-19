@@ -1,33 +1,62 @@
 
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
+
+
+
 /*everything inside the article*/
 main {
-  width: 1050px;
+  width: 350px;
   margin: 0 auto;
 }
 
-@media screen and (min-width:300px) {
-  width: 100%;
+@media screen and (min-width:700px) {
+  article {
+    float: left;
+  }
+  main {
+    width: 700px;
+  }
 }
+
+@media screen and (min-width: 1050px) {
+  main {
+    width: 1050px;
+  }
+}
+
+
+
+
 
 /*contains the images and the animations for each*/
 article {
   width: 300px;
-  float: left;
+  /*float: left;*/ /* don't need this for mobile! */
   margin: 25px;
   box-sizing: border-box;
   position: relative;
 }
 
 /*targets the section*/
-article section {
+article section:hover .blueback {
+  z-index: 1;
+  transform: rotateY(0deg);
   border: 2px solid #aabbff;
-  padding: 20px;
-  border-bottom: none;
+  /*padding: 20px;
+  border-bottom: none;*/
+}
+
+article section:hover .bluefront {
+  transform: rotateY(180deg);
 }
 
 /*controls the images*/
 article img {
   width: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in;
 }
 
 /*backside of shirt image*/
@@ -38,6 +67,8 @@ article img {
    top: 20px;
    left: 20px;
    z-index: -1;
+   transform: rotateY(180deg);
+   transition: all 1s ease-in;
 }
 
 .pinkback {
