@@ -5,164 +5,107 @@
 
 
 /*everything inside the article*/
-main {
-  width: 350px;
-  margin: 0 auto;
-}
 
 @media screen and (min-width:700px) {
   article {
     float: left;
   }
-  main {
-    width: 700px;
-  }
 }
 
 @media screen and (min-width: 1050px) {
-  main {
-    width: 1050px;
-  }
+
 }
 
-
-
-
-
 /*contains the images and the animations for each*/
+
+img {
+  padding: 20px;
+}
+
 article {
+  display: inline-block;
+  border: 2px solid ##1d2e84;
   width: 300px;
-  /*float: left;*/ /* don't need this for mobile! */
-  margin: 25px;
   box-sizing: border-box;
-  position: relative;
 }
 
 /*targets the section*/
-article section:hover .blueback {
-  z-index: 1;
-  transform: rotateY(0deg);
-  border: 2px solid #aabbff;
-  /*padding: 20px;
-  border-bottom: none;*/
-}
-
-article section:hover .bluefront {
-  transform: rotateY(180deg);
-}
-
-/*controls the images*/
-article img {
-  width: 100%;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in;
-}
-
-/*backside of shirt image*/
-
-.blueback {
-   width: 250px;
-   position: absolute;
-   top: 20px;
-   left: 20px;
-   z-index: -1;
-   transform: rotateY(180deg);
-   transition: all 1s ease-in;
-}
-
-.pinkback {
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: -1;
-}
-
-.yellowback {
-  width: 250px;
-  position:absolute;
-  top: 20px;
-  left: 20px;
-  z-index: -1;
-}
-
-article ul {
-  padding: 0;
-  margin: 0;
-}
-
 article li {
-    list-style: none;
-    display: block;
-    float: left;
-    width: 20%;
-    border: 2px solid #aabbff;
-    border-left: none;
-    box-sizing: border-box;
-    position: relative;
-    height: 50px;
+  list-style: none;
+  display: block;
+  float: left;
+  width: 20%;
+  border: 2px solid #1d2e84;
+  position: relative;
+  box-sizing: border-box;
+  height: 50px;
 }
 
-article li:hover .barmenu{
+.barmenu1 {
+  border: 2px solid #1d2e84;
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 1,inherit;
+  border-bottom: none;
+}
+
+barmenu {
+  border: 2px solid #1d2e84;
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 0;
+  border-bottom: none;
+}
+
+barmenu li {
+  border: none;
+}
+
+article li: .submenu :={
   opacity: 1;
   bottom: 60px;
 }
 
-article li:first-child {
-  border-left: 2px solid #aabbff;
+nav {
+  box-sizing: border-box;
 }
 
-/*.barmenu {
-  border:2px solid #aabbff;
-  position: absolute;
-  bottom: 70px;
-  left: 0;
-  background-color: #ffffff;
-
-}*/
-
-.barmenu {
-    border:2px solid #aabbff;
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-    background-color: #ffffff;
-    opacity: 0;
-    transition: all 0.3s linear;
-    width: 100%;
+nav ul {
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-/*.barmenu::after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #ffffff;
-  border: 2px solid #aabbff;
-  transform: rotate(45deg);
-  position: absolute;
-  bottom: -10px;
-  left: 20px;
-  border-left: none;
-  border-top: none;
-}*/
-
-.barmenu::after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #ffffff;
-  border: 2px solid #aabbff;
-  transform: rotate(45deg);
-  position: absolute;
-  bottom: -10px;
-  left: 20px;
-  border-left: none;
-  border-top: none;
+nav ul li {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  text-align: left;
+  box-sizing: border-box;
 }
 
-.barmenu li {
-  border: none;
+nav .icon {
+  inline-block;
+}
+
+nav {
+  display: inline;
+  padding: 0;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav li {
+  display: inline-block;
+  text-align: none;
+}
+
+nav li: hover {
+  background #63cdf2;
 }
